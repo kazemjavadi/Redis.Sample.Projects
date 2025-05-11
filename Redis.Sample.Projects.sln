@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "001.Redis.DataStructure.STRING", "001.Redis.DataStructure.STRING\001.Redis.DataStructure.STRING.csproj", "{668F5F07-5BE4-4039-AC2C-6C881C043E91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002.Redis.DataStructure.LIST", "002.Redis.DataStructure.LIST\002.Redis.DataStructure.LIST.csproj", "{E9500B7C-05FD-4A84-BFB6-E8F94562E231}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{668F5F07-5BE4-4039-AC2C-6C881C043E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{668F5F07-5BE4-4039-AC2C-6C881C043E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{668F5F07-5BE4-4039-AC2C-6C881C043E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9500B7C-05FD-4A84-BFB6-E8F94562E231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9500B7C-05FD-4A84-BFB6-E8F94562E231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9500B7C-05FD-4A84-BFB6-E8F94562E231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9500B7C-05FD-4A84-BFB6-E8F94562E231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

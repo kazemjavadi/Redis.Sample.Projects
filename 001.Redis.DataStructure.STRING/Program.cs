@@ -13,8 +13,10 @@ ConnectionMultiplexer redis = ConnectionMultiplexer.Connect(config);
 
 IDatabase db = redis.GetDatabase();
 
+//Set
 db.StringSet("MyKey01", "MyValue01");
 
+//Get
 string stringValue = db.StringGet("MyKey01");
 
 if (stringValue is null)
@@ -22,6 +24,7 @@ if (stringValue is null)
 else
     WriteLine($"String value of key is: {stringValue}");
 
+//Delete
 db.StringGetDelete("MyKey01");
 
 stringValue = db.StringGet("MyKey01");
