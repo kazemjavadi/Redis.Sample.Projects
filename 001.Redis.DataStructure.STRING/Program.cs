@@ -5,13 +5,13 @@ var config = new ConfigurationOptions
 {
     EndPoints = { "localhost:6379" },
     AbortOnConnectFail = false,
-    ConnectTimeout = 5000,     
+    ConnectTimeout = 5000,
     ConnectRetry = 3
 };
 
 ConnectionMultiplexer redis = ConnectionMultiplexer.Connect(config);
 
-IDatabase db =  redis.GetDatabase();
+IDatabase db = redis.GetDatabase();
 
 db.StringSet("MyKey01", "MyValue01");
 
@@ -24,7 +24,7 @@ else
 
 db.StringGetDelete("MyKey01");
 
- stringValue = db.StringGet("MyKey01");
+stringValue = db.StringGet("MyKey01");
 
 if (stringValue is null)
     WriteLine("Key does not exist!");
