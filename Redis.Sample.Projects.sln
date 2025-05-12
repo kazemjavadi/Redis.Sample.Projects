@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "001.Redis.DataStructure.STR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002.Redis.DataStructure.LIST", "002.Redis.DataStructure.LIST\002.Redis.DataStructure.LIST.csproj", "{E9500B7C-05FD-4A84-BFB6-E8F94562E231}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003.Redis.DataStructure.SET", "003.Redis.DataStructure.SET\003.Redis.DataStructure.SET.csproj", "{5A255A3A-24AB-4CE0-98D9-D211DE013C10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004.Redis.DataStructure.HASH", "004.Redis.DataStructure.HASH\004.Redis.DataStructure.HASH.csproj", "{FBD38309-F071-4329-A5A6-7C5CBEB0E213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005.Redis.DataStructure.ZSET", "005.Redis.DataStructure.ZSET\005.Redis.DataStructure.ZSET.csproj", "{26A4C9B7-F07F-40BD-A7F0-5E2528A01740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{E9500B7C-05FD-4A84-BFB6-E8F94562E231}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9500B7C-05FD-4A84-BFB6-E8F94562E231}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9500B7C-05FD-4A84-BFB6-E8F94562E231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A255A3A-24AB-4CE0-98D9-D211DE013C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A255A3A-24AB-4CE0-98D9-D211DE013C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A255A3A-24AB-4CE0-98D9-D211DE013C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A255A3A-24AB-4CE0-98D9-D211DE013C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD38309-F071-4329-A5A6-7C5CBEB0E213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD38309-F071-4329-A5A6-7C5CBEB0E213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD38309-F071-4329-A5A6-7C5CBEB0E213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD38309-F071-4329-A5A6-7C5CBEB0E213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26A4C9B7-F07F-40BD-A7F0-5E2528A01740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26A4C9B7-F07F-40BD-A7F0-5E2528A01740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26A4C9B7-F07F-40BD-A7F0-5E2528A01740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26A4C9B7-F07F-40BD-A7F0-5E2528A01740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,11 +13,13 @@ ConnectionMultiplexer redis = ConnectionMultiplexer.Connect(config);
 
 IDatabase db = redis.GetDatabase();
 
+string key = "mykey01";
+
 //Set
-db.StringSet("MyKey01", "MyValue01");
+db.StringSet(key, "MyValue01");
 
 //Get
-string stringValue = db.StringGet("MyKey01");
+string stringValue = db.StringGet(key);
 
 if (stringValue is null)
     WriteLine("Key does not exist!");
@@ -25,9 +27,9 @@ else
     WriteLine($"String value of key is: {stringValue}");
 
 //Delete
-db.StringGetDelete("MyKey01");
+db.StringGetDelete(key);
 
-stringValue = db.StringGet("MyKey01");
+stringValue = db.StringGet(key);
 
 if (stringValue is null)
     WriteLine("Key does not exist!");
