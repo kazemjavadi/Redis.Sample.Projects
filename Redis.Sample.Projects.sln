@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004.Redis.DataStructure.HAS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005.Redis.DataStructure.ZSET", "005.Redis.DataStructure.ZSET\005.Redis.DataStructure.ZSET.csproj", "{26A4C9B7-F07F-40BD-A7F0-5E2528A01740}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006.Sample.Project.Voting.on.Articles", "006.Sample.Project.Voting.on.Articles\006.Sample.Project.Voting.on.Articles.csproj", "{D5D16B5E-6B4F-43F0-9AEF-F6873A3C9836}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{26A4C9B7-F07F-40BD-A7F0-5E2528A01740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26A4C9B7-F07F-40BD-A7F0-5E2528A01740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26A4C9B7-F07F-40BD-A7F0-5E2528A01740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5D16B5E-6B4F-43F0-9AEF-F6873A3C9836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D16B5E-6B4F-43F0-9AEF-F6873A3C9836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D16B5E-6B4F-43F0-9AEF-F6873A3C9836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D16B5E-6B4F-43F0-9AEF-F6873A3C9836}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
