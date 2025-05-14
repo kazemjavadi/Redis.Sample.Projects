@@ -18,7 +18,7 @@ while (true)
     try
     {
 
-        Console.Write("[1] Add article\n[2] Show all articles\n[3] Vote article\n? ");
+        Console.Write("[1] Add article\n[2] Show all articles\n[3] Vote up the article\n[4] Show article votes\n? ");
 
         string command = Console.ReadLine();
         RunCommand(Enum.Parse<Command>(command));
@@ -32,17 +32,20 @@ while (true)
 
 void RunCommand(Command command)
 {
-    if (command == Command.AddArticle)
+    switch(command)
     {
-        AddArticle();
-    }
-    else if (command == Command.ShowAllArticles)
-    {
-        ShowAllArticles();
-    }
-    else if (command == Command.VoteArticle)
-    {
-        VoteUpArticle();
+        case Command.AddArticle:
+            AddArticle();
+            break;
+        case Command.ShowAllArticles:
+            ShowAllArticles();
+            break;
+        case Command.VoteUpArticle:
+            VoteUpArticle();
+            break;
+        case Command.ShowArticleVotes:
+            ShowArticleVotes();
+            break;
     }
 }
 
@@ -87,12 +90,26 @@ void ShowAllArticles()
 
 void VoteUpArticle()
 {
-    Console.Write("Articleid? article:");
+    db.KeyExpire(articleVoteKey, TimeSpan.FromSeconds(10));
+
+    Console.Write($"Articleid? {articleKeyPrefix}{keySeparator}");
     string articleId = Console.ReadLine();
 
     string member = GetArticleKey(Convert.ToInt32(articleId));
-    db.sortedset
-    db.SortedSetAdd(articleVoteKey, new RedisValue()
+    var value = db.SortedSetScore(articleVoteKey, member);
+    
+    if (!value.HasValue)
+        db.SortedSetAdd(articleVoteKey, member, 0);
+
+    db.SortedSetIncrement(articleVoteKey, member, 1);
+}
+
+void ShowArticleVotes()
+{
+    var articleVotes = db.SortedSetRangeByRankWithScores(articleVoteKey, 0, -1, Order.Descending);
+
+    foreach (var articleVote in articleVotes)
+        Console.WriteLine(articleVote);
 }
 
 string GetArticleKey(int articleId)=> $"{articleKeyPrefix}{keySeparator}{articleId}";
@@ -108,6 +125,7 @@ public enum Command
 {
     AddArticle = 1,
     ShowAllArticles = 2,
-    VoteArticle = 3
+    VoteUpArticle = 3,
+    ShowArticleVotes = 4
 }
 
