@@ -44,5 +44,9 @@ var valsAll = db.HashGetAll(key01);
 Console.WriteLine(string.Join(", ", valsAll));
 
 //HINCRBY
+db.HashIncrement(key01, "key03", 100);
+valsAll = db.HashGetAll(key01);
+Console.WriteLine(string.Join(", ", valsAll));
+
 
 Console.ReadLine();
