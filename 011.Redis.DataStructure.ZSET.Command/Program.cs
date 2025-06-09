@@ -113,15 +113,20 @@ Console.WriteLine("ZINTERSTORE>");
 db.SortedSetCombineAndStore(SetOperation.Intersect, key03, key01, key02, Aggregate.Sum);
 ShowKey03AllItems();
 
-void ShowKey01AllItems()=>ShowAllItems(key01);
+void ShowKey01AllItems() => ShowAllItems(key01);
 void ShowKey02AllItems() => ShowAllItems(key02);
 void ShowKey03AllItems() => ShowAllItems(key03);
 
 //ZUNIONSTORE
 Console.WriteLine("ZUNIONSTORE>");
-var unionResult = db.SortedSetCombine(SetOperation.Union, [key02, key03, key01]);
-Console.WriteLine(string.Join(", ", unionResult));
+var unionSumAggregateResult = db.SortedSetCombine(SetOperation.Union, [key02, key03, key01], aggregate: Aggregate.Sum);
+Console.WriteLine(string.Join(", ", unionSumAggregateResult));
 
+var unionMaxAggregateResult = db.SortedSetCombine(SetOperation.Union, [key02, key03, key01], aggregate: Aggregate.Max);
+Console.WriteLine(string.Join(", ", unionMaxAggregateResult));
+
+var unionMinAggregateResult = db.SortedSetCombine(SetOperation.Union, [key02, key03, key01], aggregate: Aggregate.Min);
+Console.WriteLine(string.Join(", ", unionMinAggregateResult));
 
 void ShowAllItems(string key)
 {
